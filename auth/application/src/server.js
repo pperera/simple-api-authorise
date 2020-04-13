@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const app = express();
 
 app.use(morgan("combined"));
+app.disable('etag');
 
 app.get('/auth', (request, response)=>{
   console.log(request.headers)
