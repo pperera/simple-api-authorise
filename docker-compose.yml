@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: ./web
+
+  auth:
+    build: ./auth
+
+  loadbalancer:
+    build: ./loadbalancer
+    ports:  
+     - "5000:80"
+    
+  
+
